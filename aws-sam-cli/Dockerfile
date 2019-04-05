@@ -9,7 +9,7 @@ RUN set -x \
 
 ENV AWS_SAM_CLI_VERSION 0.14.2
 RUN apk add --no-cache --virtual build-deps gcc musl-dev \
-  && pip install --no-cache-dir aws-sam-cli==$AWS_SAM_CLI_VERSION \
+  && pip install --no-cache-dir aws-sam-cli==$AWS_SAM_CLI_VERSION awscli \
   && apk del build-deps \
   && rm -rf /var/cache/apk/*
 
